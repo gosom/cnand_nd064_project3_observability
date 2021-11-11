@@ -1,7 +1,7 @@
 [img1]: ./answer-img/monitoring_verify.png
 [img2]: ./answer-img/observability_verify.png
 [img3]: ./answer-img/grafana_after_login.png
-[img4]: ./answer-image/basic_dashboard.png
+[img4]: ./answer-img/basic_dashboard.png
 
 **Note:** For the screenshots, you can store all of your answer images in the `answer-img` directory.
 
