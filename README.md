@@ -58,13 +58,21 @@ kubectl get secret --namespace monitoring prometheus-grafana -o jsonpath="{.data
 ## Describe SLO/SLI
 *TODO:* Describe, in your own words, what the SLIs are, based on an SLO of *monthly uptime* and *request response time*.
 
-An SLI (Service Level Indicator) is a metric that is used to measure a service's perfomance. 
+A Service Level Indicator (SLI), is a metric that is used to determine if the SLO (Service Level Objective) is being met.
 
-A Service-Level Indicator (SLI) is a specific metric used to measure the performance of a service. SLI is a general metric to measure uptime and latency. But truly what we require within the conclusion is a genuine estimation. based on an SLO of monthly uptime and request-response time. In this case, SLI would be the actual measurement of the uptime. Perhaps during that year, you actually achieved 99.5% uptime and request-response time or 97.3% uptime and request response time. These measurements are SLI. Notice that the above example is a ratio which is a measurement to a given amount of time (the measured uptime and request-response time per year).
+In the case the SLO is based on monthly uptime and request response time. 
+Then the one SLI is the exact value of the uptime and the other SLI is the exact value of the mean of the response times.
 
 
 ## Creating SLI metrics.
 *TODO:* It is important to know why we want to measure certain metrics for our customer. Describe in detail 5 metrics to measure these SLIs. 
+
+- The uptime, which is the time which the service is up and running
+- The response time of requests
+- The failure rate, which is the amount of errors (non success status codes, most probably 50x errors or 40x erros)
+- The amount of CPU usage
+- The amount of memory usage
+
 
 ## Create a Dashboard to measure our SLIs
 *TODO:* Create a dashboard to measure the uptime of the frontend and backend services We will also want to measure to measure 40x and 50x errors. Create a dashboard that show these values over a 24 hour period and take a screenshot.
